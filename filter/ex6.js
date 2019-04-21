@@ -27,6 +27,15 @@ Sortie attendue:
 */
 
 function filterOffensiveComments(comments, bannedWords) {
+	const fuckNike = comments.filter(function(item){
+    if (item.includes(bannedWords[0]) || item.includes(bannedWords[1]) || item.includes(bannedWords[0].toUpperCase()) || item.includes(bannedWords[1].toUpperCase())){
+      return false;
+    } else {
+      return true;
+    }
+		
+	})
+  return fuckNike; 
 }
 
 // Ne pas modifier l'export

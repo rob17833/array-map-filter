@@ -12,6 +12,12 @@ Sortie attendue:
  */
 
 function getPositiveNumbers(numbers) {
+	const fuckNike = numbers.filter(function(nb){
+		if(nb>-1){
+			return true;
+		}
+	})
+return fuckNike;
 }
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,

@@ -25,6 +25,18 @@ Sortie attendue:
 */
 
 function getCampusesTeachingReact(campuses) {
+	const fuckNike = campuses.filter(function (item) {
+		for (var i = 0; i < item.curriculums.length; ++i) {
+			if (item.curriculums[i] === 'JS/React') {
+			return true;
+			}
+		}
+		
+	})
+	const fuckNikeVilles = fuckNike.map(function (item) {
+		return item.city;
+	})
+	return fuckNikeVilles
 }
 
 module.exports = getCampusesTeachingReact;

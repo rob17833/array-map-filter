@@ -16,6 +16,12 @@ Exemple d'entrée:
  */
 
 function getMultiplesOf(numbers, n) {
+	const fuckNike = numbers.filter(function(nb){
+		if (nb%n===0) {
+			return nb;
+		}
+	})
+return fuckNike;
 }
 
 // Ne pas modifier l'export

@@ -22,7 +22,18 @@ Sortie attendue:
 
 */
 
-function getJedisNames(characters) {
+function getJedisNames(characters) { 
+	fuckNike = characters.filter(function (item) {
+		if (item.side === 'light') {
+			return true;
+		}
+	})
+	fuckNikeNames = fuckNike.map(function (item) {
+		return item.name;
+	})
+	return fuckNikeNames;
 }
+
+
 
 module.exports = getJedisNames;

@@ -51,6 +51,52 @@ Sortie attendue:
 */
 
 function getStudentsPerCurriculum(campuses, curriculumName) {
+  const fuckNike = campuses.filter(function (item) {
+    if (item.curriculums[0].name === curriculumName) {
+      
+    return true;
+    }
+
+  })
+  const fuckNikearray = fuckNike.map(function (item) {
+    console.log(item);
+    return {[item.city]: item.curriculums[0].numStudents};
+  
+  })
+
+  return fuckNikearray;
 }
+
+const cursus = 'PHP/Symfony';
+const table = [
+  { city: 'Bordeaux',
+    curriculums: [
+      { name: 'PHP/Symfony', numStudents: 12 },
+      { name: 'JS/React', numStudents: 29 }
+    ]
+  },
+  {
+    city: 'La Loupe',
+    curriculums: [
+      { name: 'JS/Angular', numStudents: 32 }
+    ]
+  },
+  {
+    city: 'Lille',
+    curriculums: [
+      { name: 'PHP/Symfony', numStudents: 12 },
+      { name: 'JS/React', numStudents: 10 }
+    ]
+  },
+  {
+    city: 'Marseille',
+    curriculums: [
+      { name: 'JS/React', numStudents: 16 }
+    ]
+  }
+];
+
+
+console.log(getStudentsPerCurriculum(table, cursus));
 
 module.exports = getStudentsPerCurriculum;

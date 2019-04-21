@@ -29,7 +29,15 @@ Sortie attendue:
  */
 
 function filterOnPrice(products, maxPrice) {
+  const fuckNike = products.filter(function(item){
+    if (item.price<=maxPrice) {
+      return item.name+item.price;
+    }
+
+  })
+return fuckNike;
 }
+
 
 // Ne pas modifier l'export
 module.exports = filterOnPrice;

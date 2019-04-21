@@ -21,8 +21,16 @@ En sortie: [
 
  */
 
-function getStringsLength(strings) {
-}
+ function getStringsLength(strings) {
+   const contains = 'contains';/*a recuperer pour intercaler*/
+   const characters = 'characters'
+    
+   let foodLength=strings.map(function(item) {
+     return `${item} contains ${item.length} characters`;
+     
+   })
+   return foodLength;
+ }
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,
 // mais alors, il faut alors lancer l'exercice avec node map/ex1

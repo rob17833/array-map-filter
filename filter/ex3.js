@@ -24,6 +24,10 @@ Sortie attendue:
  */
 
 function keepStarks(names) {
+	const fuckNike = names.filter(function(name){
+		return name.endsWith('Stark');
+	})
+return fuckNike;
 }
 
 // Ne pas modifier l'export
